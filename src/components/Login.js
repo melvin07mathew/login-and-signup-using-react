@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Signup from "./Signup";
+
 
 export default function Login(){
     const [user,setUser] = useState("");
     const [password,setPassword] = useState("");
     const [invaliduser,setInvaliduser]  = useState("")
     const [invalidpassword,setInvalidpassword] = useState("")
-    const [somedata,setsomedata] = useState("melvin");
 
     async function login_submit(event){
         if(invaliduser==="" && invalidpassword==="" && user !== "" && password !== ""){
@@ -24,8 +23,6 @@ export default function Login(){
     
     function user_onchange(event){
         setUser(event.target.value)
-        setsomedata("mathew")
-        console.log(somedata)
         if (user.length < 5){
             setInvaliduser("user name must contain minimum 5 letters")
         }else{
@@ -42,7 +39,7 @@ export default function Login(){
     }
 
     return(
-        <div style={{backgroundImage:`url("https://th.bing.com/th/id/OIP.k-mvRnIREs0IGE_8yOYv8wHaEo?pid=ImgDet&rs=1")`}}>
+        <div className="backgrounimagechanger" style={{backgroundImage:`url("https://th.bing.com/th/id/OIP.k-mvRnIREs0IGE_8yOYv8wHaEo?pid=ImgDet&rs=1")`}}>
             <h1 style={{ color: 'green', padding: 20,marginLeft:20}} >Kanban Board</h1>
             <div className="card mx-auto" style={{maxWidth:370,backgroundColor:'wheat'}}>
                 <form onSubmit={login_submit} className="card-body">

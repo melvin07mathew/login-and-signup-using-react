@@ -68,7 +68,7 @@ export default function Signup(){
 
 
     return(
-        <div style={{backgroundImage:`url("https://th.bing.com/th/id/OIP.k-mvRnIREs0IGE_8yOYv8wHaEo?pid=ImgDet&rs=1")`}}>
+        <div className="backgrounimagechanger"  style={{backgroundImage:`url("https://th.bing.com/th/id/OIP.k-mvRnIREs0IGE_8yOYv8wHaEo?pid=ImgDet&rs=1")`}}>
             <h1 style={{ color: 'green', padding: 20,marginLeft:20}} >Kanban Board</h1>
             <div className="card  mx-auto" style={{maxWidth:370,backgroundColor:'wheat'}}>
                 <form  className="card-body" onSubmit={signup}>
